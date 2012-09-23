@@ -1,6 +1,7 @@
 function calcKibble() {
+   var costInput = document.frm.bagCost.value.replace(/\$/g, ''); //strip dollar sign out of input for error control
    var step1 = document.frm.bagWeight.value * 2.5; //number of cups in bag
-   var step2 = document.frm.bagCost.value / step1; //cost per cup
+   var step2 = costInput / step1; //cost per cup
    var perDay = document.frm.feedCups.value * step2; // num of cups per day x cost per cup
    var perMonth = perDay * 30;
    var perYear = perDay * 365;
@@ -12,6 +13,7 @@ function calcKibble() {
 	   costArray[i] = parseInt(costArray[i] * 100); // Math
        costArray[i] = parseFloat(costArray[i]/100).toFixed(2); // Round and float decimal two points
       
+      
        if(newVar != null){ // if newVar exists
 newVar = newVar +  "<div class='" + term[i] + "'>The cost per " + term[i] + " is <span>$" + costArray[i].toString() + "</span></div>"; // then append string newVar
 	   }else{
@@ -20,4 +22,12 @@ newVar = newVar +  "<div class='" + term[i] + "'>The cost per " + term[i] + " is
    }
    
           document.getElementById("footer").innerHTML= newVar; // print calculations to user
+        
+}
+
+function submitEnter(){
+          var keycode = window.event.keyCode;
+          if(keycode == 13){ //checks to see if key pressed is 13 "Carriage Return"
+	           calcKibble(); // If 13 , call function calcKibble
+	           }
 }

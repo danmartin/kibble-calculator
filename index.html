@@ -16,14 +16,16 @@
     <h1>The Kibble Calculator</h1>
     <p>The Kibble Calculator is under going maintenance and is still in development. <em>(Note: Calculations are loosely based on averages of size and density.)</em></p>
     <div class="formcontain">
-    <form name="frm">
-    <label><span>Cost of Bag</span>
-    <input name="bagCost" type="text" class="bagcostclass" id="badcostid" size="8" maxlength="8"></label>
-    <label class="odd"><span>Bag weight in pounds</span>
-    <input name="bagWeight" type="text" class="bagweightclass" id="badweightid" size="8" maxlength="2"></label>
-    <label><span>Cups per day</span>
-    <input name="feedCups" type="text" class="cupsclass" id="cupsid" size="8" maxlength="2"></label>
-    <input value="Calculate" type="button" onclick="calcKibble();">
+    <form name="frm" onKeyPress="submitEnter();">
+    <ul>
+    <li><label>Cost of Bag</label>
+    <input name="bagCost" type="text" value="$" class="bagcostclass" id="badcostid" size="8" maxlength="8"></li>
+    <li><label class="odd">Bag weight in pounds</label>
+    <input name="bagWeight" type="text" class="bagweightclass" id="badweightid" size="8" maxlength="2"></li>
+    <li><label>Cups per day</label>
+    <input name="feedCups" type="text" class="cupsclass" id="cupsid" size="8" maxlength="2"></li>
+    <li><input class="calcy" value="Calculate" type="button" onclick="calcKibble();"></li>
+    </ul>
     </form> 
     </div>
   </div>

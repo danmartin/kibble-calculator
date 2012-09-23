@@ -1,13 +1,21 @@
 @charset "UTF-8";
+
+
 body {
 	font: 100%/1.4 "museo-slab", Helvetica, sans-serif;
-	background:url(art/background.png);
-	background-color: #766955;
 	margin: 0;
 	padding: 30px;
 	color: #fcfcee;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, .85);
-}
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .85); 
+	background-color: #443626;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7e7161), to(#443626));
+    background-image: -webkit-linear-gradient(top, #7e7161, #443626); 
+    background-image:    -moz-linear-gradient(top, #7e7161, #443626);
+    background-image:     -ms-linear-gradient(top, #7e7161, #443626);
+    background-image:      -o-linear-gradient(top, #7e7161, #443626);
+   -moz-box-shadow:    inset 0 0 25px #000000;
+   -webkit-box-shadow: inset 0 0 25px #000000;
+   box-shadow:         inset 0 0 25px #000000;}
 
 /* ~~ Element/tag selectors ~~ */
 ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
@@ -54,7 +62,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 */
 .content {
-	padding: 10px 0;
+	padding: 10px 0 0 0;
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -84,20 +92,23 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	line-height: 0px;
 }.formcontain {
 	text-align: right;
-	width: 250px;
+	width: 270px;
 }
-label {
-padding:5px;
-	display: block;
-	width: 100%;
+ul {list-style-type: none;;margin:0;padding:0;width:100%;}
+ul li {text-align:right;display:block;margin:0;width:100%;padding:5px;font-size:.98rem;}
+
+div.day span, div.month span, div.year span {font-weight:900;font-size:1.2rem;}
+div.day, div.month, div.year {font-weight:500;font-size:1.1rem;margin-top:.8rem;
+transition: width 2s;
+-moz-transition: width 2s; /* Firefox 4 */
+-webkit-transition: width 2s; /* Safari and Chrome */
+-o-transition: width 2s; /* Opera */
 }
-div.day span, div.month span, div.year span {font-weight:900;font-size:1.4rem;}
-div.day, div.month, div.year {font-weight:500;font-size:1.1rem;margin-top:1.2rem;}
 label span {
 	text-align: left;
 	width: auto;
 }
-p {font-size:.9rem;font-weight: 100;margin-top:0;}
+p {font-size:.9rem;font-weight: 500;margin-top:0;}
 
 
 #topbor, #leftbor, #rightbor, #bottombor {
@@ -116,7 +127,7 @@ top: 0;
 #bottombor a, #bottombor a:link, #bottombor a:visited {text-decoration:none;color:#766955;}
 #bottombor span {margin-right:30px;}
 #bottombor {
-	height: 30px;
+	height: 20px;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -137,4 +148,17 @@ top: 0;
 	right: 0;
 	bottom: 0;
 }
-h1 {font-weight:900;margin-bottom:0;}
+h1 {font-weight:900;margin-bottom:0;font-size:1.4rem;}
+
+li input {
+border: 1px #5e4f37 solid;
+background: #a8977c;
+padding:5px;
+margin-right: 5px;
+margin-top: 4px;
+color: white;
+border-radius: 5px;
+}
+
+input.calcy {padding:5px;background-color:#392a13;} 
+#footer {min-height:200px;}
