@@ -2,3 +2,5 @@
 .DS_Store?
 node_modules
 server.js
+gulpfile.js
+bower.json
