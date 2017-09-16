@@ -1,0 +1,87 @@
+@import "bootstrap";
+
+$ah-white : #fff;
+$ah-green : #5e9446;
+$ah-bodytext : #888;
+
+
+
+body {
+	font-family: "museo-sans-rounded", Helvetica, sans-serif;
+	font-size:1.5em;
+	font-weight:500;
+	margin: 0;
+	color: $ah-white;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .35); 
+	background-color: $ah-green;
+}
+input {
+	color:$ah-bodytext;
+}
+label,p {
+	font-weight:300;
+}
+.container {
+	max-width:500px;
+}
+
+.v-space {
+	margin:15px 0;
+}
+.vh-space {
+	margin:15px;
+}
+
+
+#topbor, #leftbor, #rightbor, #bottombor {
+	position: fixed;
+	z-index: 10;
+	background-color: $ah-white;
+	display: block;
+}
+
+#topbor {
+	height: 15px;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+#bottombor a, #bottombor a:link, #bottombor a:visited {text-decoration:none;color:#5e9446;}
+#bottombor span {margin-right:30px;}
+#bottombor {
+	height: 20px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align:right;
+	color:#5e9446;
+}
+#leftbor {
+	width: 15px;
+	left: 0;
+	bottom: 0;
+	top: 0;
+}
+
+#rightbor {
+	width: 15px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+
+input.calcy {
+	padding:5px;
+	background-color:#BE6A5C;
+	color:#E4DAC7;
+} 
+#footer {
+	min-height:200px;
+	.resultblock {
+		.two {
+			font-weight:800;
+		}
+		font-size:1.3em;
+	}
+}

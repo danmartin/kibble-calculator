@@ -1,0 +1,34 @@
+@import "customVariables";
+@import "bootstrap";
+
+body {
+	padding:5px;
+}
+
+input {
+	color:$ah-bodytext;
+}
+label,p {
+	font-weight:300;
+}
+.container {
+	max-width:500px;
+}
+
+.v-space {
+	margin:15px 0;
+}
+.vh-space {
+	margin:15px;
+}
+
+
+#footer {
+	min-height:200px;
+	.resultblock {
+		.two {
+			font-weight:800;
+		}
+		font-size:1.3em;
+	}
+}
